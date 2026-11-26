@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#E31E24"/>
+  <!-- Havells distinct geometric H -->
+  <path d="M8 8h4.5v6.5h7V8H24v16h-4.5v-6.5h-7V24H8V8z" fill="#ffffff"/>
+  <circle cx="16" cy="14.5" r="1.5" fill="#E31E24"/>
+</svg>

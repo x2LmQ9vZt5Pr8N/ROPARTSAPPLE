@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+    <linearGradient id="bodyGradH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#f1f5f9"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="bodyGradV" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#f1f5f9"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="blueClip" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- Shadow below part -->
+  <ellipse cx="108" cy="158" rx="46" ry="10" fill="#0f172a" opacity="0.06"/>
+
+  <g filter="url(#softShadow)">
+    <!-- Horizontal arm -->
+    <path d="M50 82 L110 82 Q128 82 128 100 L128 146 Q128 152 122 152 L94 152 Q88 152 88 146 L88 116 Q88 110 82 110 L50 110 Q44 110 44 104 L44 88 Q44 82 50 82 Z" fill="url(#bodyGradH)" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Left Push-Fit Port Collar -->
+    <rect x="42" y="80" width="10" height="32" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="34" y="84" width="8" height="24" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Blue Locking Clip Left -->
+    <path d="M38 82 C38 80 44 80 44 82 L44 110 C44 112 38 112 38 110 Z" fill="url(#blueClip)"/>
+
+    <!-- Bottom Push-Fit Port Collar -->
+    <rect x="86" y="142" width="44" height="10" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+    <rect x="90" y="152" width="36" height="8" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Blue Locking Clip Bottom -->
+    <path d="M88 148 C86 148 86 144 88 144 L128 144 C130 144 130 148 128 148 Z" fill="url(#blueClip)"/>
+
+    <!-- Inner Port Openings -->
+    <ellipse cx="34" cy="96" rx="2" ry="7" fill="#64748b"/>
+    <ellipse cx="108" cy="160" rx="11" ry="2" fill="#64748b"/>
+
+    <!-- Subtle embossed RO arrow / logo -->
+    <path d="M96 102 L104 96 L104 100 L112 100 L112 104 L104 104 L104 108 Z" fill="#94a3b8" opacity="0.45"/>
+  </g>
+</svg>

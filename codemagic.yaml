@@ -1,0 +1,80 @@
+workflows:
+  ios_sideload_preview:
+    name: iPhone Unsigned Preview (Sideloadly)
+    max_build_duration: 45
+    instance_type: mac_mini_m2
+    environment:
+      flutter: 3.47.9
+      xcode: latest
+      cocoapods: default
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ~/Library/Caches/CocoaPods
+    scripts:
+      - name: Get Flutter packages and precache iOS artifacts
+        script: |
+          flutter pub get
+          flutter precache --ios
+      - name: Build unsigned iOS release
+        script: flutter build ios --release --no-codesign
+      - name: Package unsigned IPA for Sideloadly
+        script: |
+          mkdir -p build/ios/ipa Payload
+          cp -R build/ios/iphoneos/Runner.app Payload/
+          zip -r -y build/ios/ipa/roparts-unsigned.ipa Payload
+          rm -rf Payload
+    artifacts:
+      - build/ios/ipa/*.ipa
+
+  ios_app_store_release:
+    name: iPhone App Store & TestFlight Release
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: roparts_appstore_connect
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: in.roparts.roparts
+      flutter: 3.47.9
+      xcode: latest
+      cocoapods: default
+      vars:
+        BUNDLE_ID: "in.roparts.roparts"
+    cache:
+      cache_paths:
+        - ~/.pub-cache
+        - ~/Library/Caches/CocoaPods
+    scripts:
+      - name: Get Flutter packages and precache iOS artifacts
+        script: |
+          flutter pub get
+          flutter precache --ios
+      - name: Set production APNs entitlement and lint plist files
+        script: |
+          plutil -replace aps-environment -string production ios/Runner/Runner.entitlements
+          plutil -lint ios/Runner/Runner.entitlements
+          plutil -lint ios/Runner/Info.plist
+          plutil -lint ios/Runner/PrivacyInfo.xcprivacy
+      - name: Apply provisioning profiles to Runner project
+        script: xcode-project use-profiles --project ios/Runner.xcodeproj
+      - name: Resolve monotonic TestFlight build number and build IPA
+        script: |
+          NEW_BUILD_NUMBER="$PROJECT_BUILD_NUMBER"
+          if [ -n "${APP_STORE_APP_ID:-}" ]; then
+            LATEST_BUILD=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APP_ID" 2>/dev/null || echo 0)
+            if [ "$LATEST_BUILD" -ge "$NEW_BUILD_NUMBER" ] 2>/dev/null; then
+              NEW_BUILD_NUMBER=$((LATEST_BUILD + 1))
+            fi
+          fi
+          flutter build ipa --release \
+            --build-number="$NEW_BUILD_NUMBER" \
+            --export-options-plist=/Users/builder/export_options.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true

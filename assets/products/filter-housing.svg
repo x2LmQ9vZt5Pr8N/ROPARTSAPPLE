@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="fhBgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+    <linearGradient id="fhCapBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="40%" stop-color="#0284c7"/>
+      <stop offset="80%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="fhBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f1f5f9"/>
+      <stop offset="90%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="fhShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#fhBgGlow)"/>
+
+  <!-- Base shadow -->
+  <ellipse cx="100" cy="180" rx="35" ry="8" fill="#0f172a" opacity="0.09"/>
+
+  <g filter="url(#fhShadow)">
+    <!-- Blue Cap / Head -->
+    <!-- Inlet / Outlet Bosses -->
+    <rect x="52" y="34" width="18" height="12" rx="2" fill="#0284c7" stroke="#0369a1" stroke-width="1"/>
+    <rect x="130" y="34" width="18" height="12" rx="2" fill="#0284c7" stroke="#0369a1" stroke-width="1"/>
+    <!-- Red Pressure Relief Button -->
+    <rect x="97" y="24" width="6" height="5" rx="1.5" fill="#ef4444"/>
+
+    <!-- Main Cap Body -->
+    <path d="M64 38 L136 38 Q144 38 144 46 L142 62 Q142 66 138 66 L62 66 Q58 66 58 62 L56 46 Q56 38 64 38 Z" fill="url(#fhCapBlue)" stroke="#0369a1" stroke-width="1.2"/>
+    <rect x="66" y="58" width="68" height="8" rx="2" fill="#0369a1"/>
+
+    <!-- Thread Collar Ring -->
+    <rect x="68" y="66" width="64" height="6" fill="#0284c7" stroke="#075985" stroke-width="0.8"/>
+
+    <!-- Housing Bowl (White/Semi-clear with Ribs) -->
+    <path d="M70 72 L130 72 L126 166 Q126 174 116 174 L84 174 Q74 174 74 166 Z" fill="url(#fhBodyGrad)" stroke="#cbd5e1" stroke-width="1.2"/>
+
+    <!-- Vertical Strengthening Ribs -->
+    <line x1="84" y1="78" x2="84" y2="162" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+    <line x1="100" y1="78" x2="100" y2="164" stroke="#ffffff" stroke-width="2.5" opacity="0.9"/>
+    <line x1="116" y1="78" x2="116" y2="162" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+
+    <line x1="86" y1="78" x2="86" y2="162" stroke="#cbd5e1" stroke-width="1" opacity="0.6"/>
+    <line x1="102" y1="78" x2="102" y2="164" stroke="#cbd5e1" stroke-width="1" opacity="0.6"/>
+    <line x1="118" y1="78" x2="118" y2="162" stroke="#cbd5e1" stroke-width="1" opacity="0.6"/>
+
+    <!-- Bottom Rim -->
+    <ellipse cx="100" cy="170" rx="18" ry="3" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  </g>
+</svg>

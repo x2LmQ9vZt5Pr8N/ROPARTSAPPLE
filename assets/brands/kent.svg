@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#003B7A"/>
+  <!-- Bold K with water droplet -->
+  <path d="M8 8v16h3.2v-6.8l5.2 6.8h4.2l-6-7.8 5.6-8.2h-4l-5 7.4V8H8z" fill="#ffffff"/>
+  <circle cx="25" cy="11" r="2.2" fill="#E31837"/>
+  <path d="M25 15.5c-2.4 0-4.2 1.8-4.2 4.2 0 2.8 4.2 6.3 4.2 6.3s4.2-3.5 4.2-6.3c0-2.4-1.8-4.2-4.2-4.2z" fill="#00A3E0"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#003580"/>
+  <!-- Pureit teardrop purity shield -->
+  <path d="M16 6c-4.5 4-7.5 8.5-7.5 13a7.5 7.5 0 0 0 15 0c0-4.5-3-9-7.5-13z" fill="#0099DA"/>
+  <circle cx="16" cy="19" r="4.5" fill="#ffffff"/>
+  <circle cx="16" cy="19" r="2.5" fill="#003580"/>
+</svg>

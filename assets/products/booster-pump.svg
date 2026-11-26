@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bpBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+    <linearGradient id="bpMotor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="bpHead" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="bpSh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="200" height="200" fill="url(#bpBg)"/>
+  <ellipse cx="100" cy="172" rx="68" ry="8" fill="#0f172a" opacity="0.08"/>
+  <g filter="url(#bpSh)">
+    <!-- Motor Body (Black/Slate Cylinder) -->
+    <rect x="74" y="66" width="92" height="66" rx="8" fill="url(#bpMotor)" stroke="#1e293b" stroke-width="1.5"/>
+    <!-- Motor Label -->
+    <rect x="94" y="74" width="56" height="30" rx="3" fill="#ffffff" opacity="0.9"/>
+    <text x="122" y="87" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="7" font-weight="700" fill="#0f172a">BOOSTER PUMP</text>
+    <text x="122" y="97" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="6" font-weight="600" fill="#0284c7">24V DC • 100 GPD</text>
+    <!-- Rear End Cap & Rubber Mounts -->
+    <rect x="162" y="72" width="8" height="54" rx="2" fill="#0f172a"/>
+    <!-- Pump Diaphragm Head (White/Grey POM Casting) -->
+    <rect x="34" y="60" width="44" height="78" rx="6" fill="url(#bpHead)" stroke="#cbd5e1" stroke-width="1.5"/>
+    <!-- Inlet / Outlet 3/8" Ports -->
+    <rect x="42" y="44" width="14" height="18" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <rect x="42" y="136" width="14" height="18" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Head Assembly Hex Screws -->
+    <circle cx="44" cy="74" r="3.5" fill="#94a3b8" stroke="#475569" stroke-width="0.8"/>
+    <circle cx="66" cy="74" r="3.5" fill="#94a3b8" stroke="#475569" stroke-width="0.8"/>
+    <circle cx="44" cy="124" r="3.5" fill="#94a3b8" stroke="#475569" stroke-width="0.8"/>
+    <circle cx="66" cy="124" r="3.5" fill="#94a3b8" stroke="#475569" stroke-width="0.8"/>
+    <!-- Base Rubber Vibration Dampers -->
+    <rect x="70" y="132" width="22" height="10" rx="3" fill="#0f172a"/>
+    <rect x="136" y="132" width="22" height="10" rx="3" fill="#0f172a"/>
+  </g>
+</svg>

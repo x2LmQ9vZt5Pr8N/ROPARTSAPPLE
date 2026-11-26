@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Livpure overlapping leaf and water drop -->
+  <path d="M13 8c0 0-5 6-5 10a5 5 0 0 0 10 0c0-4-5-10-5-10z" fill="#00A3E0"/>
+  <path d="M19 10c0 0 5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9z" fill="#6CB33F" opacity="0.9"/>
+  <path d="M15 15a4 4 0 0 0 2 3.5 4 4 0 0 0 2-3.5" fill="#ffffff" opacity="0.3"/>
+</svg>

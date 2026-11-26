@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#007934"/>
+  <!-- AO Smith bold monogram and water curve -->
+  <text x="16" y="19" font-family="Arial, sans-serif" font-weight="900" font-size="11" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">AO</text>
+  <path d="M6 23c6-2 14-2 20 0" stroke="#00A3E0" stroke-width="2" stroke-linecap="round"/>
+</svg>

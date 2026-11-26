@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="mhBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+    <linearGradient id="mhBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f8fafc"/>
+      <stop offset="80%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="mhSh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="200" height="200" fill="url(#mhBg)"/>
+  <ellipse cx="100" cy="170" rx="65" ry="8" fill="#0f172a" opacity="0.08"/>
+  <g filter="url(#mhSh)">
+    <!-- Main Vessel Body -->
+    <rect x="48" y="78" width="112" height="44" rx="8" fill="url(#mhBody)" stroke="#cbd5e1" stroke-width="1.5"/>
+    <!-- End Screw Cap (Left) -->
+    <rect x="34" y="72" width="18" height="56" rx="4" fill="url(#mhBody)" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Feed Water Port on Cap -->
+    <rect x="22" y="92" width="12" height="16" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Pure Permeate & Reject Outlets (Right) -->
+    <rect x="160" y="82" width="16" height="12" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <rect x="160" y="104" width="16" height="12" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Label -->
+    <text x="104" y="99" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="700" fill="#0f172a">MEMBRANE HOUSING</text>
+    <text x="104" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="6.5" font-weight="600" fill="#0284c7">1812 STANDARD</text>
+  </g>
+</svg>
